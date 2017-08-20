@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+	    <title></title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css"/>
+	    <!--<link rel="stylesheet" href="css/bootstrap-maizi.css"/>-->
+	    <link rel="stylesheet" href="css/animate.css"/>
+	    <style type="text/css">
+		    body{
+		    	font-family: "微软雅黑";
+		    	height: 2000px;
+		    }
+	    	header{
+	    		margin-top: 70px;
+	    		margin-bottom: 20px;
+	    	}
+	    	
+	    	/*副导航 start*/
+			section.nav{
+			    border-top: 3px solid #f03d39;
+			    border-bottom: 2px solid #ccc;
+			    background: url(img/bj_nav.png) repeat;
+			}
+			section.nav li a{
+			    display: block;
+			    float: left;
+			    height: 34px;
+			    padding: 0px 25px;
+			    color: #333;
+			    line-height: 34px;
+			    margin: 7.5px 0px 7.5px 0;
+			    font-size: 16px;
+			}
+			section.nav .container ul li a:hover{
+				background: #ff6666;
+				border-radius: 5px;
+				color: #fff;
+			}
+			/*副导航 end*/
+	    	
+	    	/*左导航 start*/
+	    	.zy_index_l{width: 100px;background: #eaeaea;padding: 50px 5px;margin-right: 10px;position: fixed;left: 50%;margin-left: -610px;bottom: 0px;top: 10px;display: none;z-index: 999;}
+			.zy_index_l li a{display:block;width: 90px;font-size: 16px; color: #333;text-align: center; padding-left: 0; padding-right: 0;}
+	    	.zy_index_l li a:hover {
+			    background: #ff6666;
+			    border-radius: 5px;
+			    color: #fff;
+			}
+			/*左导航 end*/
+			
+			/*up start*/
+			#up{
+				display: none;
+				width:50px;
+				height: 50px;
+				background: #fa9634;
+				position: fixed;
+				right: 0;
+				bottom: 15%;
+				text-align: center;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			#up span{
+				border-radius: 5px;
+				display:block;
+				width: 20px;
+				height: 20px;
+				border: 6px solid #fff;
+				border-bottom: transparent;
+				border-right: transparent;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-30%) rotate(45deg);
+			}
+			/*up end*/
+	    </style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">	
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="" class="navbar-brand" title="扫描下载app" data-toggle="tooltip" data-placement="bottom">下载格斗世界app</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="">发布</a></li>
+						<li><a href="">快捷登录</a></li>
+						<li><a href="">意见反馈</a></li>
+						<li>
+							<a href="" class="dropdown-toggle" data-toggle="dropdown">更多<i class="caret"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="">用户协议</a></li>
+								<li><a href="">联系我们</a></li>
+								<li><a href="">关于我们</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-4 col-xs-6">
+						<a href=""><img src="img/logo.png" alt="" /></a>
+					</div>
+					<div class="col-md-6 col-sm-8 col-xs-6">
+						<form action="" class="navbar-form pull-right">
+		                    <div class="input-group">
+		                        <input type="search" class="form-control" placeholder="请输入关键词"/>
+		                        <span class="input-group-btn">
+		                            <button class="btn btn-default" type="submit">
+		                                <i class="glyphicon glyphicon-search"></i>
+		                            </button>
+		                        </span>
+		                    </div>
+		                </form>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="nav navbar-default">
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li><a href="">推荐</a></li>
+					<li><a href="">格斗资讯</a></li>
+					<li><a href="">格斗名人</a></li>
+					<li><a href="">精彩赛事</a></li>
+					<li><a href="">格斗教学</a></li>
+					<li><a href="">集锦</a></li>
+				</ul>
+			</div>
+		</section>
+		<div class="zy_index_l" style="display: none;">
+		    <ul class="nav navbar-nav">
+		        <li><a href="">推荐</a></li>
+				<li><a href="">格斗资讯</a></li>
+				<li><a href="">格斗名人</a></li>
+				<li><a href="">精彩赛事</a></li>
+				<li><a href="">格斗教学</a></li>
+				<li><a href="">集锦</a></li>
+		    </ul>
+		</div>
+		
+		<!--网站banner开始 支持移动端手动滑动-->
+		<div class="slider7" >
+			<div class="slide"><a href=""><img src="img/1-1F22010444cY.jpg" alt="" /></a></div>
+			<div class="slide"><a href=""><img src="img/1-1F42H1394O02.jpg" alt="" /></a></div>
+			<div class="slide"><a href=""><img src="img/1-1FH91AI5T7.jpg" alt="" /></a></div>
+			<div class="slide"><a href=""><img src="img/1-1FP9202F4T4.png" alt="" /></a></div>
+		</div>
+
+		
+		<div id="up">
+			<span></span>
+		</div>
+		
+	
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/jquery.bxslider.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		/*二维码 start*/
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+        /*二维码 end*/
+       
+       	/*左导航 start*/
+        $(function() {
+		  $(window).scroll(function() {
+		    if ($(this).scrollTop() > 190) {
+		      $(".zy_index_l").fadeIn(200);
+		    } else {
+		      $(".zy_index_l").fadeOut(200);
+		    }
+		  });
+		})
+        /*左导航 end*/
+       
+        /*up start*/
+        $(function(){
+			$(window).scroll(function(){
+			var $scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;//兼容浏览器
+				if($scrollTop >350){
+					$("#up").show();
+				}else{ 
+					$("#up").hide();
+				};
+			});
+			$("#up").click(function(){
+				$('body,html').animate({scrollTop:0},500);
+				return false;
+			});
+		});
+		/*up end*/
+		
+		/*网站banner开始 支持移动端手动滑动*/
+		$(document).ready(function  () {
+			$(".slider7").bxSlider({
+				slideWidth:1920,//配置焦点图的宽度
+				infiniteLoop:false,
+				hideControlOnEnd:true,
+				slideMargin:10
+			});
+		});
+    </script>
+	</body>
+</html>
